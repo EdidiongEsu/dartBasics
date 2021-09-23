@@ -1,5 +1,11 @@
-void person(username, age) {
-  print("My name is $username and I am $age years");
+marketing(staff) {
+  List marketingStaff = ["Dipo", "OV", "moses"];
+  if (marketingStaff.contains(staff)) {
+    print("$staff is in the marketing team");
+  } else {
+    print("$staff is a new staff");
+  }
+  return staff;
 }
 
 void main() {
@@ -42,5 +48,5 @@ void main() {
 }
    */
 
-  person(54, 34);
+  marketing("Dipo");
 }
