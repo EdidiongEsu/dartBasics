@@ -1,12 +1,3 @@
-marketing(staff) {
-  List marketingStaff = ["Dipo", "OV", "moses"];
-  if (marketingStaff.contains(staff)) {
-    print("$staff is in the marketing team");
-  } else {
-    print("$staff is a new staff");
-  }
-  return staff;
-}
 
 void main() {
   /*
@@ -46,9 +37,37 @@ void main() {
   //Void can not return any value.
 }
 }
-  // Tessting github
+  // if else statement
+  marketing(staff) {
+  List marketingStaff = ["Dipo", "OV", "moses"];
+  if (marketingStaff.contains(staff)) {
+    print("$staff is in the marketing team");
+  } else {
+    print("$staff is a new staff");
+  }
+  return staff;
+  } 
+
+  marketing("OV");
+
+  -------------Switch statements--------------------------
+  enterName(){
+  print("Input the person's name");
+  String staff = stdin.readLineSync()!;
+  return staff;
+  }
+
+
+  switch (enterName()) {
+    case "Dipo":
+      print("He is a marketing staff");  
+      break;
+    default:
+      print("Unknown department");
+  }
   
    */
 
-  marketing("OV");
+
+  
 }
