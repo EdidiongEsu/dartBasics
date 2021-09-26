@@ -1,4 +1,36 @@
 
+class Person {
+
+    String? name;
+    int? age;
+    int? height;
+    String? disabled;
+
+  Person (String name, int age, int height, String diasbled){
+
+    this.name = name;
+    this.age = age;
+    this.height = height;
+    this.disabled = diasbled;
+
+    print("Data has been inputted correctly:");
+    print("$name, $age, $height, $disabled");
+  }
+
+  bool isDisabled(){
+    return disabled == "yes";
+  } 
+
+}
+
+class Soldier extends Person {
+ 
+  void printInfo()
+    {
+        print(super.age);
+    }
+}
+
 void main() {
   /*
   import 'dart:io';
@@ -66,8 +98,20 @@ void main() {
       print("Unknown department");
   }
   
+
+  --------------Loops------------------------------
+  String prompt(an){
+    print()
+  }
+
+  for (var i = 0; i < List.length; i++) {
+    
+  }
    */
 
+  
+  Person edidiong = Person("Edidiong", 12, 5, "yes");
 
+  print(edidiong.isDisabled());
   
 }
