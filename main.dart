@@ -1,11 +1,34 @@
-marketing(staff) {
-  List marketingStaff = ["Dipo", "OV", "moses"];
-  if (marketingStaff.contains(staff)) {
-    print("$staff is in the marketing team");
-  } else {
-    print("$staff is a new staff");
+
+class Person {
+
+    String? name;
+    int? age;
+    int? height;
+    String? disabled;
+
+  Person (String name, int age, int height, String diasbled){
+
+    this.name = name;
+    this.age = age;
+    this.height = height;
+    this.disabled = diasbled;
+
+    print("Data has been inputted correctly:");
+    print("$name, $age, $height, $disabled");
   }
-  return staff;
+
+  bool isDisabled(){
+    return disabled == "yes";
+  } 
+
+}
+
+class Soldier extends Person {
+ 
+  void printInfo()
+    {
+        print(super.age);
+    }
 }
 
 void main() {
@@ -46,7 +69,49 @@ void main() {
   //Void can not return any value.
 }
 }
+  // if else statement
+  marketing(staff) {
+  List marketingStaff = ["Dipo", "OV", "moses"];
+  if (marketingStaff.contains(staff)) {
+    print("$staff is in the marketing team");
+  } else {
+    print("$staff is a new staff");
+  }
+  return staff;
+  } 
+
+  marketing("OV");
+
+  -------------Switch statements--------------------------
+  enterName(){
+  print("Input the person's name");
+  String staff = stdin.readLineSync()!;
+  return staff;
+  }
+
+
+  switch (enterName()) {
+    case "Dipo":
+      print("He is a marketing staff");  
+      break;
+    default:
+      print("Unknown department");
+  }
+  
+
+  --------------Loops------------------------------
+  String prompt(an){
+    print()
+  }
+
+  for (var i = 0; i < List.length; i++) {
+    
+  }
    */
 
-  marketing("Dipo");
+  
+  Person edidiong = Person("Edidiong", 12, 5, "yes");
+
+  print(edidiong.isDisabled());
+  
 }
