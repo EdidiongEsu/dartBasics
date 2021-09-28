@@ -2,17 +2,13 @@
 class Person {
 
     String? name;
-    int? age;
-    int? height;
-    String? disabled;
+    int age;
+    int height;
+    String disabled;
 
-  Person (String name, int age, int height, String diasbled){
+  Person(this.name, this.age, this.height, this.disabled);
 
-    this.name = name;
-    this.age = age;
-    this.height = height;
-    this.disabled = diasbled;
-
+  checkData(){
     print("Data has been inputted correctly:");
     print("$name, $age, $height, $disabled");
   }
@@ -24,11 +20,11 @@ class Person {
 }
 
 class Soldier extends Person {
- 
-  void printInfo()
-    {
-        print(super.age);
-    }
+  String rank;
+  String gun;
+
+  Soldier(name, age, height, disabled, this.rank, this.gun):super(name, age, height, disabled);
+
 }
 
 void main() {
@@ -110,8 +106,7 @@ void main() {
    */
 
   
-  Person edidiong = Person("Edidiong", 12, 5, "yes");
 
-  print(edidiong.isDisabled());
-  
+  Soldier edidiong = Soldier("Edidiong", 12, 5, "yes", "Genenral", "AK-47" );
+  print(edidiong.checkData());
 }
